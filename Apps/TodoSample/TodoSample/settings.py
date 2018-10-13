@@ -75,8 +75,13 @@ WSGI_APPLICATION = 'TodoSample.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'todolistDB', #Database name you created in mysql
+        'USER': 'root',
+        'PASSWORD': 'pwd123',
+        'HOST':'',# leaving this blank sets it as default HOST
+        'PORT':'',# default port
+        
     }
 }
 
